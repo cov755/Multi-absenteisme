@@ -106,7 +106,6 @@ if uploaded_file:
         sa = len(df[df['Total Arrêts maladie'] >= 3]) / len(df['Matricule anonyme']) * 100
         st.metric("Taux de salariés Covéa", f"{sa:.1f} %")
 
-
 # Groupe arrêt
     df['Groupe Arrêts'] = df['Total Arrêts maladie'].apply(lambda x: '≥ 3 arrêts' if x >= 3 else '< 3 arrêts')
 
